@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Party Tickets Order Form</title>
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body>
+
+<!-- header starts -->
+<header>
+<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+<h2>The Halloween Store</h2>
+<h3>For the little Goblin in all of us!</h3>
+</header>
+		
+<!-- navigation starts -->
+<nav id="nav_menu">
+<ul>
+<li><a href="index.html" class="current">Home</a></li>
+<li><a href="about_us.html">About Us</a>
+<ul>						
+<li><a href="our_history.html">Our History</a></li>
+<li><a href="our_team.html">Our Team</a></li>
+</ul>
+</li>
+<li><a href="products.html">Our Products</a></li>
+<li><a href="tickets_order_form.html">Party Tickets</a></li>
+<li><a href="contact_us.html">Contact Us</a></li>
+</ul>
+</nav>
+
+<!-- main content starts -->
+<main>
+<!-- sidebar starts -->
+<aside>
+<ul>
+<li><a href="products/props.html">Props</a></li>
+<li><a href="products/costumes.html">Costumes</a></li>
+<li><a href="products/special.html">Special FX</a></li>
+<li><a href="products/masks.html">Masks</a></li>
+</ul>
+</aside>
+
+<!-- the main section of the content starts -->
+<section>
+<h1>Buy Tickets for a Halloween Party</h1>
+</section>
+
+<!-- section can also be used instead of div tag but im comfortable with div tag -->
+
+<!-- form starts -->
+			
+<div id="formmain">
+
+<div id="assign1">
+<form action="place_order.html" name="order_form" method="post">
+<fieldset>
+<legend>Member Information</legend>
+
+<div id="mf">
+<label for="email">
+<span>Email:</span>
+<input type="email" autofocus required title="email (gagan@gmail.com)">
+</label><br>
+
+<label for="first_name">
+<span>First name:</span>
+ <input required type="firstname" id="firstname" required title="First Name (text)">
+</label><br>
+
+<label for="last_name">
+<span>Last name:</span>
+<input required type="lastname" id="lastname" required title="Last Name (text)">
+</label><br>
+
+<label for="address">
+<span>Address:</span>
+<input required type="address" id="address" name="adddress" title="Address">
+</label><br>
+
+<label for="city">
+<span>City:</span>
+<input required type="city" id="city" required title="City (text)">
+</label><br>
+
+<label for="province">
+<span>Province:</span>
+<input required type="province" id="province" placeholder="2-character code" pattern="\S{2}" required title="Province (two alphabets)">
+</label><br>
+
+<label for="postal_code">
+<span>Postal code:</span>
+<input required type="postalcode" id="postalcode" placeholder="6 Characters" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required title="Postal Code (6 alpha numbric digits)">
+</label><br>
+
+<label for="phone_no">
+<span>Phone no:</span>
+<input required type="phoneno" id="phonno" placeholder="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Phone number (10 digits)">
+</label>
+</div>
+
+</fieldset>
+
+</div>
+
+<!-- order info -->	
+<div id="assign2">
+
+<fieldset>
+<legend>Ordering Information</legend>
+<div id="oi">
+<table>
+<tr>
+<td><label>Party:</label></td> 
+<td>
+<select>
+<option>Fang-tastic Feast</option>
+<option>Frigh Night</option>
+<option>Ghouls' Night Out</option>
+<option>Monster Mash</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><label>Order type:</label></td> 
+<td>
+<select>
+<option>Member Package</option>
+<option>Donor Package</option>
+<option>Single Tickets</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Number of tickets:</td> <td><input type="number" min="1" placeholder="Number of Single Ticket" id="notickets" title="Number of Tickets (numbers)"></td>
+</tr>
+
+</table>
+</div>
+</fieldset>
+
+</div>
+
+<!-- payment method -->
+<div id="assign3">
+
+<fieldset>
+<legend>Payment Method</legend>
+<div id="pm">
+<table>
+<input type="radio" name="pay" id="billme" value="Bill me" required><label for="billme"> Bill me</label>
+<input type="radio" name="pay" id="creditcard" value="Credit Card" required><label for="creditcard"> Credit Card</label>
+</table>
+</div>
+</fieldset>
+
+</div>
+
+<!-- credit card info -->
+<div id="assign4">
+
+<fieldset>
+<legend>Credit Card Information</legend>
+<div id="cci">
+
+<table>
+<tr>
+<td><label>Card Type:</label></td>
+<td>
+<select>
+<option>Visa</option>
+<option>Master Card</option>
+<option>Discover</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><label>Card number:</label></td> <td><input type="cardNumber" placeholder="16 digits"  pattern="\S{16}" required title="Card Number (16 DIGITS)s"></td>
+</tr>
+</table>
+</div>
+<div id="cci2">
+
+<div id="cci2">
+<table>
+<tr>
+<td><label>Card Expiry Date:</label></td>
+<td>
+<select name="mon">
+<option>JANUARY</option>
+<option>FEBRUARY</option>
+<option>MARCH</option>
+<option>APRIL</option>
+<option>MAY</option>
+<option>JUNE</option>
+<option>JULY</option>
+<option>AUGUST</option>
+<option>SEPTEMBER</option>
+<option>OCTOBER</option>
+<option>NOVEMBER</option>
+<option>DECEMBER</option>
+</select>
+<select name="year">
+<option>2015</option>
+<option>2016</option>
+<option>2017</option>
+<option>2018</option>
+<option>2019</option>
+</select>
+</td>
+</tr>
+</table>
+</div>
+</fieldset>
+
+</div>
+
+<!-- submit -->
+<div id="assign5">
+
+<fieldset>
+<legend>Submit Your Order</legend>
+<div id="so">
+<table>
+<tr>
+<td><input type="submit" value="Submit"> <input type="RESET" value="Reset Fields"></td>
+</tr>
+</table>
+</div>
+</fieldset>
+</form>
+</div>
+
+</div>
+</main>
+
+<!-- footer starts -->
+<footer>
+<p>&copy; 2020 Gagandeep Singh</p>
+</footer>
+
+</body>
+</html>
